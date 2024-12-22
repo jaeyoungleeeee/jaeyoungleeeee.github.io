@@ -28,19 +28,24 @@
             justify-content: center;
             position: relative;
             height: 140vh; 
+           
         }
-        /* 기본 스타일 */
+        
+       
         body {
             margin: 0;
+            padding: 0; 
             font-family: Arial, sans-serif;
             background-color: #f4f0e6;
-            color: #333; /* 텍스트 색상 */
+            color: #333; 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             min-height: 730vh;
+            max-width: 9vw; 
+            overflow-x: hidden;
         }
         #gallerymenu {
             position: absolute;
@@ -441,7 +446,8 @@
         <img src="chain.png" alt="Chain" id="chain">
         <img src="bottom.png" alt="Bottom" id="bottom">
         <img src="cookie.png" alt="Cookie" id="cookie">
-
+        <div class="container">
+            <div class="content">
         <div id="snow-container"></div>
 
         <script>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lucky draw</title>
+    <style>
+       
+
+        img, .but {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 140vh; 
+        }
+ 
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f0e6;
+            color: #333; /* 텍스트 색상 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+        }
+        #gift {
+            position: absolute;
+            top: 0px;
+            left: 49.25%;
+            transform: translateX(-50%);
+            width: 1770px;
+            height: auto;
+            z-index: 99;
+        }
+        #c1 {
+            position: absolute;
+            top: 400px;
+            left: 34%;
+            transform: translateX(-50%);
+            width: 470px;
+            height: auto;
+            z-index: 99;
+        }
+        #cc1 {
+            display: none; /* 처음에 숨겨진 상태 */
+            position: absolute;
+            top: 320px;
+            left: 49%;
+            transform: translateX(-50%);
+            width: 1000px;
+            z-index: 100;
+        }
+        #c2 {
+            position: absolute;
+            top: 323px;
+            left: 49.95%;
+            transform: translateX(-50%);
+            width:   270px;
+            height: auto;
+            z-index: 99;
+        }
+        #cc2 {
+            display: none; /* 처음에 숨겨진 상태 */
+            position: absolute;
+            top: 320px;
+            left: 49%;
+            transform: translateX(-50%);
+            width: 1000px;
+            z-index: 100;
+        }
+        #c3 {
+            position: absolute;
+            top: 580px;
+            left: 49.5%;
+            transform: translateX(-50%);
+            width:  270px;
+            height: auto;
+            z-index: 99;
+        }
+        #cc3 {
+            display: none; /* 처음에 숨겨진 상태 */
+            position: absolute;
+            top: 320px;
+            left: 49%;
+            transform: translateX(-50%);
+            width: 1000px;
+            z-index: 100;
+        }
+        #c4 {
+            position: absolute;
+            top: 380px;
+            left:68%;
+            transform: translateX(-50%);
+            width: 470px;
+            height: auto;
+            z-index: 99;
+        }
+        #cc4 {
+            display: none; /* 처음에 숨겨진 상태 */
+            position: absolute;
+            top: 320px;
+            left: 49%;
+            transform: translateX(-50%);
+            width: 1000px;
+            z-index: 100;
+        }
+        #c5 {
+            position: absolute;
+            top: 755px;
+            left: 41.8%;
+            transform: translateX(-50%);
+            width:  500px;
+            height: auto;
+            z-index: 99;
+        }
+        #cc5 {
+            display: none; 
+            position: absolute;
+            top: 320px;
+            left: 49%;
+            transform: translateX(-50%);
+            width: 1000px;
+            z-index: 100;
+        }
+         #c6 {
+            position: absolute;
+            top:871px;
+            left: 64%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: auto;
+            z-index: 99;
+        }
+        #cc6 {
+            display: none; 
+            position: absolute;
+            top: 320px;
+            left: 49%;
+            transform: translateX(-50%);
+            width: 1000px;
+            z-index: 100;
+        }
+         img {
+            position: absolute;
+            cursor: pointer;
+            transition: opacity 1s ease-out; 
+         }
+            
+        .fade-out {
+            opacity: 0;
+            pointer-events: none; 
+        }
+  
+/* 화면 크기가 1024px 이상일 때 적용 */
+@media (max-width: 1300) and (min-width: 1024px){
+    #gift {
+        width: 100%;
+        top: 0%;
+    }
+    #c1 {
+        width:27%;
+        top:13.3%;
+    }
+    #c2 {
+        width:16%;
+        top:11%;
+    }
+    #c3 {
+        width:16%;
+        top: 19.8%;
+    }
+    #c4 {
+        width:27%;
+        top:12%;
+    }
+    #c5 {
+        width:27%;
+        top:26.2%;
+    }
+    #c6 {
+        width:17%;
+        top:29%;
+    }
+    #cc1,#cc2,#cc3,#cc4,#cc5,#cc6 {
+        width:10%;
+        top:15%;
+    }
+}
+
+
+/* 노트북 & 태블릿 가로*/
+
+@media (max-width: 1023px) and (min-width: 768px) {
+        #gift {
+        width: 100%;
+        top: 0%;
+    }
+    #c1 {
+        width:28%;
+        top:23%;
+    }
+    #c2 {
+        width:16%;
+        top:18.7%;
+    }
+    #c3 {
+        width:16.5%;
+        top: 35%;
+    }
+    #c4 {
+        width:27%;
+        top:22.3%;
+    }
+    #c5 {
+        width:28%;
+        top:46.6%;
+    }
+    #c6 {
+        width:16%;
+        top:52.3%;
+    }
+    #cc1,#cc2,#cc3,#cc4,#cc5,#cc6 {
+        width:50%;
+        top:19%;
+    }
+    
+}
+
+
+/* 모바일 가로 & 태블릿 세로 : 480px-767px*/
+@media (max-width: 767px) and (min-width: 480px) {
+    #gift {
+        width: 100%;
+        top: 0%;
+    }
+    #c1 {
+        width:27%;
+        top:13.3%;
+    }
+    #c2 {
+        width:16%;
+        top:11%;
+    }
+    #c3 {
+        width:16%;
+        top: 19.8%;
+    }
+    #c4 {
+        width:27%;
+        top:12%;
+    }
+    #c5 {
+        width:27%;
+        top:25%;
+    }
+    #c6 {
+        width:17%;
+        top:29%;
+    }
+    #cc1,#cc2,#cc3,#cc4,#cc5,#cc6 {
+        width:50%;
+        top:10%;
+    }
+}
+
+/*모바일 : -479px*/
+@media (max-width: 767px) and (min-width: 480px) {
+    #gift {
+        width: 100%;
+        top: 0%;
+    }
+    #c1 {
+        width:27%;
+        top:13.8%;
+    }
+    #c2 {
+        width:16%;
+        top:11%;
+    }
+    #c3 {
+        width:16%;
+        top: 19.8%;
+    }
+    #c4 {
+        width:27%;
+        top:13.6%;
+    }
+    #c5 {
+        width:26.7%;
+        top:26.4%;
+    }
+    #c6 {
+        width:16%;
+        top:29.6%;
+    }
+    #cc1,#cc2,#cc3,#cc4,#cc5,#cc6 {
+        width:50%;
+        top:19%;
+    }
+}
+
+    </style>
+        
+    </head>
+    <body>
+        
+        <img src="gift.png" alt="Gift" id="gift">
+        <img src="c1.png" alt="C1" id="c1"> 
+        <img src="cc1.png" alt="CC1" id="cc1"> <!-- 2초 뒤 나타날 이미지 -->
+        <img src="c2.png" alt="C2" id="c2">
+        <img src="cc2.png" alt="CC2" id="cc2"> 
+        <img src="c3.png" alt="C3" id="c3"> 
+        <img src="cc3.png" alt="CC3" id="cc3">
+        <img src="c4.png" alt="C4" id="c4"> 
+        <img src="cc4.png" alt="CC4" id="cc4">
+        <img src="c5.png" alt="C5" id="c5"> 
+        <img src="cc5.png" alt="CC5" id="cc5">
+        <img src="c6.png" alt="C6" id="c6"> 
+        <img src="cc6.png" alt="CC6" id="cc6">
+    
+        <script>
+        
+        // c1 이미지에만 클릭 이벤트 설정
+        const c1Image = document.getElementById("c1");
+        const cc1Image = document.getElementById("cc1");
+
+        c1Image.addEventListener("click", () => {
+            // 1. fade-out 클래스 추가하여 사라지게 함
+            c1Image.classList.add("fade-out");
+
+           
+            setTimeout(() => {
+                cc1Image.style.display = "block";
+            }, 1500); 
+        });
+            const images = document.querySelectorAll("img");
+    
+            images.forEach(image => {
+            if (image.id !== "gift") { // gift 이미지는 제외
+                image.addEventListener("click", () => {
+                    image.classList.add("fade-out"); // fade-out 클래스 추가
+
+                  
+                    if (image.id === "c1") {
+                        const cc1Image = document.getElementById("cc1");
+                        setTimeout(() => {
+                            cc1Image.style.display = "block";
+                        }, 1200);
+                    }
+                    if (image.id === "c2") {
+                        const cc1Image = document.getElementById("cc2");
+                        setTimeout(() => {
+                            cc1Image.style.display = "block";
+                        }, 1200);
+                    }
+                    if (image.id === "c3") {
+                        const cc1Image = document.getElementById("cc3");
+                        setTimeout(() => {
+                            cc1Image.style.display = "block";
+                        }, 1200);
+                    }
+                    if (image.id === "c4") {
+                        const cc1Image = document.getElementById("cc4");
+                        setTimeout(() => {
+                            cc1Image.style.display = "block";
+                        }, 1200);
+                    } if (image.id === "c5") {
+                        const cc1Image = document.getElementById("cc5");
+                        setTimeout(() => {
+                            cc1Image.style.display = "block";
+                        }, 1200);
+                    } if (image.id === "c6") {
+                        const cc1Image = document.getElementById("cc6");
+                        setTimeout(() => {
+                            cc1Image.style.display = "block";
+                        }, 1200);
+                    }
+                });
+            }
+        });
+        </script>
+    </body>
+    </html>

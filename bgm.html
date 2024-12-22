@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>christmas bgm</title>
+    <style>
+            img, .but {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 140vh; 
+        }
+
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f0e6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            min-height:400vh;
+            overflow-x: hidden;
+        
+        }
+        #bgmmenu {
+            position: absolute;
+            top:20px;
+            left: 49.25%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1990px;
+            height: auto;
+            z-index: 999;
+        }
+        #exo {
+            position: absolute;
+            top: 1445px;
+            left:35.7%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1550px;
+            height: auto;
+            z-index: 9999;
+        }
+        #aespa {
+            position: absolute;
+            top:1447px;
+            left: 61%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1550px;
+            height: auto;
+            z-index: 9999;
+        }
+        #theboys {
+            position: absolute;
+            top: 1820px;
+            left:61%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1550px;
+            height: auto;
+            z-index: 9999;
+        }
+        #riize {
+            position: absolute;
+            top: 1823px;
+            left: 35.9%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1550px;
+            height: auto;
+            z-index: 9999;
+        }
+        #artist {
+            position: absolute;
+            top: 1200px;
+            left: 50.5%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1000px;
+            height: auto;
+            z-index: 999;
+        }
+        #buts {
+            position: absolute;
+            top: 3165px;
+            left: 57%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1770px;
+            height: auto;
+            z-index: 999;
+        }
+        #red-box {
+            position: absolute;
+            top: 2600px; 
+            left: 49.3%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1720px;
+            height: 130px;
+            background-color: #9a0b1a;
+            z-index: 1000;
+        }
+        #jinglebell {
+            position: absolute;
+            top: 2200px;
+            left: 75.4%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1770px;
+            height: auto;
+            z-index: 9999;
+        }
+      
+        #lp {
+            position: absolute;
+            top: 2850px;
+            left: 49.8%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1770px;
+            height: auto;
+            z-index: 99;
+            opacity: 25%;
+        }
+        #mic {
+            position: absolute;
+            top: 3890px;
+            left: 72.8%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:1370px;
+            height: auto;
+            z-index: 99;
+            opacity: 25%;
+        }
+        #circle-button {
+            position: absolute;
+            top: 3800px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; 
+            max-width:50px;
+            height: 50px;
+            background-color: #9a0b1a;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 9999;
+            
+        }
+
+        #lyrics {
+            position: absolute;
+            top: 3200px;
+            left: 10%;
+            width:100%; 
+            max-width:1300px;
+            color: #9a0b1a;
+            font-size: 18px;
+            line-height: 1.6;
+            z-index: 109;
+            background: #e8e3dd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto;
+            max-height: 480px;
+            font-family: '더페이스샵 잉크립퀴드체', sans-serif; /* 원하는 폰트 설정 */
+    font-size: 25px; /* 폰트 크기 설정 */
+    line-height: 1.4; /* 줄 간격 설정 */
+    font-weight: normal; /* 폰트 굵기 설정 */
+    color:#9a0b1a; /* 텍스트 색상 */
+        }
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:100%;
+            pointer-events: none; /* 클릭 이벤트 방해 금지 */
+            overflow: hidden;
+            z-index: 999; /* 콘텐츠보다 뒤에 표시 */
+        }
+
+        .snowflake {
+    position: absolute;
+    top: -50px; /* 눈송이가 화면 위 50px 지점에서 시작 */
+    color: #f4f0e6;
+    font-size: 0.2em;
+    user-select: none;
+    animation: fall linear infinite;
+}
+
+@media(max-width: 1300) and (min-width: 1024px){
+    #bgmmenu{
+        width:100%;
+        top: 0%;
+    }
+    #artist{
+        width:80%;
+        top: 12%;
+    }
+    #aespa{
+        width:32%;
+        top: 57%;
+    }
+    #exo{
+        width:32%;
+        top: 57%;
+    }
+    #riize{
+        width:32%;
+        top: 67%;
+    }
+   #theboys{
+    width:32%;
+        top: 67%;
+    }
+    #mic
+   { width:100%;
+        top:145%;
+    }
+    #jinglebell 
+    {
+    width:160%;
+        top:132%;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    #bgmmenu{
+        width: 100%;
+        top: 0%;
+   }
+    #artist{
+        width:80%;
+        top: 71%;
+    }
+    #aespa{
+        width:100%;
+        top: 90%;
+        right:80%;
+    }
+    #exo{
+        width:100%;
+        top: 90%;
+        left:32%;
+    }
+    #riize{
+        width:100%;
+        top: 120%;
+        left:32%;
+    }
+   #theboys{
+    width:100%;
+        top: 120%;
+        right:80;
+    }
+    #jinglebell 
+    {
+    width:160%;
+        top:132%;
+    }
+    #lp
+    {
+    width:100%;
+        top:188%;
+    }
+    #red-box 
+    {
+    width:100%;
+    height:2%;
+        top:182%;
+    }
+    #circle-button 
+    {
+    width:80%;
+        top:285%;
+    }
+    #lyrics
+    {
+    width:55%;
+        top:230%;
+       height:15%;
+       padding: 15%;
+       font-size: 100%;
+    }
+    #buts
+    {
+    width:100%;
+    top:246%;
+    }
+    #mic
+   { width:100%;
+        top:245%;
+}
+}
+
+
+/* 노트북 & 태블릿 가로*/
+
+@media (max-width: 767px) and (min-width: 480px) {
+    #bgmmenu{
+        width: 100%;
+        top: 0%;
+   }
+    #artist{
+        width:80%;
+        top:25%;
+    }
+    #aespa{
+        width:100%;
+        top: 57%;
+        right:80%;
+    }
+    #exo{
+        width:100%;
+        top: 57%;
+        left:32%;
+    }
+    #riize{
+        width:100%;
+        top: 77%;
+        left:32%;
+    }
+   #theboys{
+    width:100%;
+        top: 77%;
+        right:80;
+    }
+    #jinglebell 
+    {
+    width:100%;
+        top:102%;
+    }
+    #lp
+    {
+    width:100%;
+        top:122%;
+    }
+    #red-box 
+    {
+    width:100%;
+    height:2%;
+        top:120%;
+    }
+    #circle-button 
+    {
+    width:80%;
+        top:188%;
+    }
+    #lyrics
+    {
+    width:55%;
+        top:144%;
+       height:15%;
+       padding: 15%;
+       font-size: 100%;
+    }
+    #buts
+    {
+    width:100%;
+        top:163%;
+    }
+    #mic
+   { width:100%;
+        top:172%;
+    }
+}
+
+
+/*모바일 : -479px*/
+@media (max-width: 479px){
+    #bgmmenu{
+        width: 100%;
+        top: 0%;
+   }
+    #artist{
+        width:80%;
+        top: 21%;
+    }
+    #aespa{
+        width:105%;
+        top: 40%;
+        right:80%;
+    }
+    #exo{
+        width:100%;
+        top: 40%;
+        left:32%;
+    }
+    #riize{
+        width:100%;
+        top: 55%;
+        left:32%;
+    }
+   #theboys{
+    width:100%;
+        top: 55%;
+        right:80;
+    }
+    #jinglebell 
+    {
+    width:100%;
+        top:75%;
+    }
+    #lp
+    {
+    width:100%;
+        top:102%;
+    }
+    #red-box 
+    {
+    width:100%;
+    height:2%;
+        top:82%;
+    }
+    #circle-button 
+    {
+    width:80%;
+        top:132%;
+    }
+    #lyrics
+    {
+    width:55%;
+        top:102%;
+       height:12%;
+       padding: 15%;
+       font-size: 80%;
+    }
+    #buts
+    {
+    width:100%;
+        top:121%;
+    }
+    #mic
+   { width:100%;
+        top:125%;
+}
+}
+
+
+    </style>
+</head>
+<body>
+    <img src="bgmmenu.png" alt="Bgmmenu" id="bgmmenu">
+    <img src="artist.png" alt="Artist" id="artist">
+    <img src="lp.png" alt="Lp" id="lp">
+    <img src="mic.png" alt="Mic" id="mic">
+    <img src="jinglebell.png" alt="Jinglebell" id="jinglebell">
+    <img src="buts.png" alt="Buts" id="buts">
+    <div id="red-box"></div>
+    <div id="snow-container"></div>
+    
+    <!-- 오디오 재생 버튼들 -->
+    <img src="exo.png" alt="Exo" id="exo" onclick="playAudio('exo.mp3')">
+    <img src="aespa.png" alt="Aespa" id="aespa" onclick="playAudio('aespa.mp3')">
+    <img src="riize.png" alt="Riize" id="riize" onclick="playAudio('riize.mp3')">
+    <img src="theboys.png" alt="Theboys" id="theboys" onclick="playAudio('theboys.mp3')">
+    
+
+    <!-- 오디오 태그 -->
+    <audio id="audio-player"></audio>
+
+
+    <div id="circle-button"></div>
+    <div id="lyrics">
+        <div class="lyrics">
+            <span class="lineup">[Lyrics lineup]</span><br><br><br><br>
+
+        Aespa - Jingle Bell Rock<br>
+        [2023]<br>
+        Christmas album<br><br>
+        Riize - Love 119<br>
+        [2024]<br>
+        Rizing<br><br>
+        Exo - 첫 눈<br>
+        [2013]<br>
+        12월의 기적<br><br>
+        The boyz - Chirstmassy!
+        [2020]<br>
+        Christmassy<br><br>
+    </div>
+    <div id="snow-container"></div>
+
+</div>
+
+    <script>
+        const button = document.getElementById('circle-button');
+        const lyrics = document.getElementById('lyrics');
+
+        const lyricsList = [
+            `Exo - 첫 눈<br><br><br>
+            첫눈 오는 이런 오후에 너에게
+전화를 걸 수만 있다면 기쁠텐데<br>
+벌써 일년이 지났는데 난 아직 미련 가득해서,<br>
+"쓸쓸해", 어느새 혼잣말<br>
+1년 전으로 갈 수 있다면 (마음을 되돌려) 지금 우린 달라졌을까?<br>
+Yeah, 바보 같은 소리지, 그래도 만약<br>
+<br>
+너를 만나면, 눈물 차 올라
+바보 같은 난 아무 말 못해<br>
+말해줘, "메리, 메리 크리스마스"
+"안녕, 잘 지내는거지?"<br>
+눈이 내리면, 멍든 가슴이<br>
+모두 하얗게 다 덮여지게 될까?<br>
+미안해, 잘해주지 못해
+후회만 가득가득 했던 그 크리스마스<br>
+<br>
+불빛 가득한 거리거리
+혼자 걸었어, 다들 행복해 보여<br>
+너는 언제나 공기처럼 있어줄<br>
+거란 착각에 멍청히 보내 (내가 너무 미안해)<br>
+지나고 나면, 너무 소중해
+(항상 지나치지) 왜 그때는 모르는 걸까? 
+지금은 다를 거야, 말해주고파 (yeah)<br>
+<br>
+너를 만나면, 눈물 차 올라<br>
+바보 같은 난 아무 말 못해<br>
+말해줘, "메리, 메리 크리스마스"<br>
+"안녕, 잘 지내는거지?"<br>
+<br>
+눈이 내리면, 멍든 가슴이<br>
+모두 하얗게 다 덮여지게 될까?<br>
+눈물인지 눈 때문인지<br>
+점점 너 멀리 멀리 보이던 그 크리스마스<br>
+<br><br>
+정말 신기한 일이야, 너의<br>
+생각만으로 눈물 차 흐르니말야<br>
+(Tears are falling, falling, falling)<br>
+다시 너에게로 가고 싶어<br>
+무슨 일이든 할 수 있어<br>
+지금까지 삶이 모두 사라진다 해도, girl<br>
+<br>
+너를 만나면, 눈물 차 올라 (ooh, ooh, ooh)<br>
+바보 같은 난 아무 말 못해 (yeah, yeah, yeah)<br>
+말해줘, "메리, 메리 크리스마스"<br>
+"안녕, 잘 지내는거지?" (Baby girl, ooh, yeah)<br>
+눈이 내리면, 멍든 가슴이 모두 하얗게 다 덮여지게 될까?<br>
+미안해, 잘해주지 못해 후회만 가득가득 했던<br>
+<br>
+너를 만나면, 눈물 차 올라 (눈물 차 올라)<br>
+바보 같은 난 아무 말 못해 (아무 말 못하는 나 인걸)<br>
+"메리, 메리 크리스마스"<br>
+"잘 지내는거지?"<br>
+<br>
+눈이 내리면, 멍든 가슴이 (ooh, ooh)<br>
+모두 하얗게 다 덮여지게 될까? (Yeah)<br>
+눈물인지 눈 때문인지<br>
+점점 너 멀리 멀리 보이던 그 크리스마스`,
+
+`Riize - LOVE119<br><br><br>
+괜한 자존심 때문에 끝내자고 말을 해버린 거야<br>
+뺏긴 my heart, that girl's a killer<br><br>
+Love so good, feels like a thriller<br>
+시작됐지, 이건 emergency<br>One-one-nine, one-one-nine<br>
+Save my life, save my life<br>
+She sets me free, 이건 emergency love <br><br>
+너는 마치 flashlight (flashlight)<br>
+자꾸만 시선을 뺏겨 (oh)<br>
+많은 사람 속에서 (ooh)<br>
+순간 너만 보였어 (you)<br>
+다들 말하지, love is so sweet, oh-ah (so sweet)<br>
+아직 난 뭔지 모르겠지 right now (mmm)<br><br>
+처음 느낀 이상한 떨림<br>
+이건 진심, I'm not kidding<br>
+친구이기엔 더 deeper, deeper, deeper<br>
+어쩌면 love song, yah (love song, yah)<br><br>
+뺏긴 my heart, that girl's a killer (killer)<br>
+Love so good, feels like a thriller (thrillеr)<br>
+시작됐지, 이건 emergency (vroom)<br>
+Onе-one-nine, one-one-nine (one-one-nine)<br>
+Save my life, save my life (save my life)<br>
+She sets me free, 이건 emergency love (love)<br><br>
+이상해 나, what do I do?<br>
+너에 관한 건 뭐라도<br>
+신경 쓰여 난 all day, 넌 만들어, my day<br>
+이 감정은 someday, 난 알고 싶어<br>
+귓가에 울린, love is so sweet, oh-ah (so sweet)<br>
+멈출 수 없이 빠져버린 나야 (ooh)<br><br>
+네가 자꾸 궁금해 왜지?<br>
+말도 안 돼, I'm not kidding (I'm not)<br>
+시간이 갈수록 깊어, 깊어, 깊어져<br>
+가는 나잖아 (나잖아)<br><br>
+뺏긴 my heart, that girl's a killer (killer, killer)<br>
+Love so good, feels like a thriller (thriller, thriller)<br>
+시작됐지, 이건 emergency (vroom)<br>
+One-one-nine, one-one-nine (one-one-nine)<br>
+Save my life, save my life (save my life)<br>
+She sets me free, 이건 emergency love (love)<br><br>
+Yeah, 이건 뭘까? You know what I'm talking about<br>
+왜 이렇게 나의 맘이 어지러운 걸까?<br>
+이 모든 게 내가 널 좋아하는 건가?<br>
+난 그럼 더 이상 끌고 싶지 않아, ooh<br>
+다른 건 (다른 건) nothing but (nothing but)<br>
+I want it all with you<br><br>
+뺏긴 my heart, that girl's a killer (killer)<br>
+Love so good, feels like a thriller (thriller)<br>
+시작됐지, 이건 emergency (oh, vroom)<br>
+One-one-nine, one-one-nine (oh, one-one-nine)<br>
+Save my life, save my life (save my life)<br>
+She sets me free (hey), 이건 emergency love (love)`
+,
+`      Aespa - Jingle Bell Rock <br><br><br>
+            Jingle bell, jingle bell, jingle bell rock<br>
+        Jingle bells swing and jingle bells ring<br>
+        Snowin' and blowin' up bushels of fun<br>
+        Now the jingle hop has begun<br>
+        Jingle bell, jingle bell, jingle bell rock<br>
+        Jingle bells chime in jingle bell time<br>
+        Dancin' and prancin' in Jingle Bell Square<br>
+        In the frosty air<br><br>
+        What a bright time<br>
+        It's the right time<br>
+        To rock the night away<br>
+        Jingle bell time is a swell time<br>
+        To go glidin' in a one-horse sleigh<br><br>
+        Giddy up, jingle horse, pick up your feet<br>
+        Jingle around the clock (Clock Clock Clock)<br>
+        Mix and a-mingle in the jinglin' feet<br>
+        That's the jingle bell rock<br><br>
+        Ring Ring Ring, jingle bell rock<br>
+        Play like a spell<br>
+        I won't tell, jingle bell talk<br>
+    So giddy up, giddy up<br>
+    Turn it up fast til we burn up<br>
+    We ain't ever gonna stop<br>
+    Jingle bell rock<br><br>
+    Jingle bell, jingle bell, jingle bell rock<br>
+    Jingle bells chime in jingle bell time<br>
+    Dancin' and prancin' in Jingle Bell Square<br>
+    In the frosty air<br><br>
+    What a bright time<br>
+    It's the right time<br>
+    To rock the night away<br>
+    Jingle bell time is a swell time<br>
+    To go glidin' in a one-horse sleigh<br><br>
+    Giddy up, jingle horse, pick up your feet<br>
+    Jingle around the clock (Clock Clock Clock)<br>
+    Mix and a-mingle in the jinglin' feet<br>
+    That's the jingle bell<br>
+    That's the jingle bell<br>
+    That's the jingle bell rock (Umm)`
+    ,
+    `      The boyz - Christmassy! <br><br><br>
+           Yeah oh<br>
+너로 가득 채운 this year<br>
+하지만 자꾸 늘어만 가는 wish list<br>
+오늘 너에게 꼭 전해줄 message<br>
+걸음을 재촉해 설레 honestly<br>
+이끌 듯 멈춰선 mistletoe 밑의<br>
+두근대며 기다린 trees and kiss(es)<br>
+Don't hold back<br>
+꿈에도 했던 그 고백<br>
+이젠 알지? 너였던 걸<br><br>
+Hey babe, do you remember? (remember?)<br>
+3년 전 이 맘 때쯤<br>
+첫 만남 그 떨림을<br>
+내겐 every December (December)<br>
+매일 너 하나로 끝없이 이어진 Christmas<br><br>
+울려 퍼진 캐롤도<br>
+거리의 불빛도<br>
+나를 설레게 하지만 baby tonight<br><br>
+빨개진 그 두 볼로<br>
+날 바라볼 때면 (때면)<br>
+It's so Christmassy!<br>
+다 너 때문인 걸<br>
+Oh oh oh whoa 함께 있는 것 만으로<br>
+It feels like Christmas on and on<br>
+It feels like Christmas on and on<br>
+Christmas on and on<br><br>
+유난히 예쁘게<br>
+빛으로 물든 거리<br>
+소란스런 사람들 쏟아지는 함박눈<br>
+그 위로 너와 딱 한 발짝 옆의 내 발자국 yeah<br><br>
+꼭 마치 dejavu<br>
+내게 끝없이 반복되는 days like you<br>
+특별한 하루였는데<br>
+그 하루가 널 만난 뒤론 like everyday babe<br><br>
+Hey babe, do you remember? (remember?)<br>
+서툴고 반짝이던 첫눈을 맞춘 기억<br>
+내겐 every December (December)<br>
+함께 걸어가면 끝없이 이어질 Christmas<br><br>
+울려 퍼진 캐롤도 거리의 불빛도<br>
+나를 설레게 하지만 baby tonight<br>
+빨개진 그 두 볼로<br>
+날 바라볼 때면 (때면)<br>
+It's so Christmassy!<br>
+다 너 때문인 걸<br>
+Oh oh oh whoa 함께 있는 것 만으로<br>
+It feels like Christmas on and on<br>
+It feels like Christmas on and on<br>
+Oh oh oh whoa 널 만난 그 날 이 후로<br>
+It feels like Christmas on and on<br>
+It feels like Christmas on and on<br><br>
+오늘 너의 기분은 어때?<br>
+나만큼 네 맘도 설레?<br>
+(I'm down, I'm down, I'm down, I'm down, I'm down)<br>
+이 계절을 이렇게 always<br>
+몇 번이고 함께해 줄래?<br>
+(I'm down, I'm down, I'm down, I'm down, I'm down)<br><br>
+You got me like<br>
+Oh oh oh whoa 빠져만 드는 내 맘도<br>
+It feels like Christmas on and on<br>
+It feels like Christmas on and on<br>
+Oh oh oh whoa 널 바라보는 지금도<br>
+It feels like Christmas on and on<br>
+It feels like Christmas on and on<br><br>
+La la la, la la la<br>
+La la la, la la la<br>
+La la la, la la la<br>
+There are always days like you (always days like you)<br>
+La la la la<br>
+Always days like you<br>
+Yeah, always days like you`
+];
+    
+        let currentIndex = 0;
+
+        button.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % lyricsList.length;
+            lyrics.innerHTML = `<div class="lyrics">${lyricsList[currentIndex]}</div>`;
+        });
+    </script>
+    <script>
+
+        const lineup = document.querySelector('.lineup','');
+        lineup.style.fontWeight = 'bold'; // 폰트 두께를 굵게 설정
+        lineup.style.color = '9a0b1a';       // 필요하면 색상 변경도 가능
+
+       
+        const snowflakes = 50; // 눈송이 개수
+        const characters = ["❄", "❅", "❆"]; // 눈송이 모양
+        const snowContainer = document.getElementById('snow-container');
+
+        // 눈송이 생성
+        for (let i = 0; i < snowflakes; i++) {
+            createSnowflake();
+        }
+
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.textContent = characters[Math.floor(Math.random() * characters.length)];
+            snowflake.style.left = Math.random() * 100 + "vw";
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s"; // 2~5초
+            snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + "em";
+            snowContainer.appendChild(snowflake);
+
+            // 눈송이가 화면 아래로 사라질 때 제거하고 새로 생성
+            snowflake.addEventListener("animationend", () => {
+                snowflake.remove();
+                createSnowflake();
+            });
+        }
+        function playAudio(audioFile) {
+            const audio = document.getElementById('audio-player');
+            audio.src = audioFile; // 클릭한 이미지에 맞는 오디오 파일 설정
+            audio.play(); // 오디오 재생
+        }
+    </script>
+    <style>
+        /* 스크롤바 스타일 */
+        #lyrics::-webkit-scrollbar {
+            width: 10px; /* 스크롤바 너비 */
+        }
+        #lyrics::-webkit-scrollbar-track {
+            background: #f0e6ff; /* 스크롤바 트랙(배경) 색상 */
+            border-radius: 10px; /* 모서리를 둥글게 */
+        }
+        #lyrics::-webkit-scrollbar-thumb {
+            background: #9a0b1a; /* 스크롤바 색상 */
+            border-radius: 10px; /* 모서리를 둥글게 */
+        }
+        #lyrics::-webkit-scrollbar-thumb:hover {
+            background: #9a0b1a; /* 스크롤바를 마우스로 가리킬 때 색상 */
+        }
+
+
+    </style>
+    
+</body>
+</html>
